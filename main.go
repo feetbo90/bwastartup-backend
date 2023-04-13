@@ -36,6 +36,7 @@ func main() {
 
 	api := router.Group("/api/v1")
 	api.POST("/users", userHandler.RegisterUser)
+	api.POST("/sessions", userHandler.Login)
 
 	router.Run()
 }
