@@ -84,6 +84,9 @@ func (h *userHandler) Login(c *gin.Context) {
 		return
 	}
 
+	// myUserToken, err := h.authService.ValidateToken(token)
+
+	// fmt.Println("ini token: ", myUserToken)
 	formatter := user.FormatUser(loggedinUser, token)
 
 	response := helper.APIResponse("Successfuly loggedin", http.StatusOK, "success", formatter)
